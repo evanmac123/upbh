@@ -20,13 +20,34 @@ function foundationpress_sidebar_widgets() {
 
 	register_sidebar(array(
 		'id' => 'footer-widgets',
-		'name' => __( 'Footer widgets', 'foundationpress' ),
+		'name' => __( 'Main Footer widgets', 'foundationpress' ),
 		'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
-		'before_widget' => '<section id="%1$s" class="large-4 columns widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="large-3 columns widget %2$s">',
 		'after_widget' => '</section>',
 		'before_title' => '<h6>',
 		'after_title' => '</h6>',
 	));
+
+	register_sidebar(array(
+		'id' => 'footer-widgets-top-left',
+		'name' => __( 'Top Left Footer widgets', 'foundationpress' ),
+		'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
+		'before_widget' => '<section id="%1$s" class="large-12 cell widget %2$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h6>',
+		'after_title' => '</h6>',
+	));
+
+	register_sidebar(array(
+		'id' => 'footer-widgets-top-right',
+		'name' => __( 'Top Right Footer widgets', 'foundationpress' ),
+		'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
+		'before_widget' => '<section id="%1$s" class="large-12 cell widget %2$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h6>',
+		'after_title' => '</h6>',
+	));
+
 }
 
 add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );
