@@ -4,10 +4,10 @@ Template Name: Right Sidebar
 */
 get_header(); ?>
 
-<header class="gray-header">
+<div class="gray-header">
 	<h2 class=" grid-container entry-title"><?php the_title(); ?></h2>
-</header>
-<div class="main-wrap sidebar-right">
+</div>
+<div class="main-wrap sidebar-right grid-container">
 	<main class="main-content">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 					</i>
 				</span>
 				<div class="side-quote__author-name">
-				<?php the_field("side-author"); ?>
+				~<?php the_field("side-author"); ?>
 				</div>
 			</div>
 				</div>

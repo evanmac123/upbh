@@ -51,7 +51,6 @@
 @import "global/colors";
 @import "global/wp-admin";
 @import "global/wp-overrides"; // Modules
-@import "modules/navigation";
 @import "modules/content";
 @import "modules/footer";
 @import "modules/editor-style"; // Components
@@ -62,6 +61,9 @@
 @import "components/links"; // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
+@import "templates/sidebar-right";
+@import "components/forms";
+@import "modules/navigation";
 
 body {overflow-x: hidden;}
 
@@ -69,207 +71,9 @@ body {overflow-x: hidden;}
   max-width:100%;
 }
 
-.call-button {
-  color: #fefefe;
-  padding: 6px;
-  background-color: #ffaa7b;
-  border-radius: 5px;
-  width: 308px;
-  text-align: center;
-  float: right;
-  margin: 10px 10px 60px;
-}
-
-.call-title {
-  font-weight: 700;
-  font-size: 1.2em;
-}
-//home
-
 .page section {
   margin-bottom: 15px;
 }
-
-.front {
-  .front-header {
-    .front-hero {
-      background-image: url("../images/Slider/UPBH.jpg");
-      background-size: cover;
-      min-height: 526px;
-      height: 100%;
-      padding:0;
-      margin-bottom:30px;
-    }
-
-    .marketing-right{
-      position:relative;
-      display:none;
-      @include breakpoint(medium){
-        display:block;
-      }
-      img{
-      width: auto;
-      position: relative;
-      border: 4px solid rgba(255,255,255,0.4);
-      @include vertical-align();
-      }
-    }
-    .marketing-left {
-      @include breakpoint(medium) {
-        height: 100%;
-        min-height: 526px;
-        padding: 60px 0;
-      }
-      background-color: rgba(0,52,120,.5);
-      text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-
-
-      h2{
-        color: #fff;
-        font-size: 22px;
-        max-width: 500px;
-        margin-bottom: 15px;
-        padding: 5px 25px 5px 25px;
-        text-align: left;
-        font-weight: bold;
-        font-family: 'Lato',arial,sans-serif;
-        text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-      }
-      h3{
-      color: #fff;
-      font-size: 68px;
-      max-width: 540px;
-      margin-bottom: 0;
-      text-align: center;
-      font-family: 'Lato',arial,sans-serif;
-      font-weight: 800;
-      text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-      padding: 5px 25px 5px 25px;
-      }
-      .italic-title{
-        color: #fff;
-        font-size: 40px;
-        max-width: 540px;
-        margin-bottom: 0;
-        padding: 25px 30px 25px 30px;
-        text-align: center;
-        font-weight: 500;
-        font-style: italic;
-        font-family: 'Lato',arial,sans-serif;
-        text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-      }
-
-      .title {
-        color: $white;
-        @include breakpoint(medium) {
-          font-size: 48px;
-        }
-        font-size: 28px;
-        max-width: 540px;
-        margin-bottom: 0;
-        padding: 5px 25px;
-        font-weight: 700;
-        text-align: center;
-      }
-
-      .subtitle {
-        color: $white;
-        @include breakpoint(medium) {
-          font-size: 68px;
-        }
-        font-size: 38px;
-        max-width: 540px;
-        margin-bottom: 0;
-        text-align: center;
-        font-family: 'Lato',arial,sans-serif;
-        font-weight: 700;
-        text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-      }
-    }
-
-    .tagline {
-      width: 100%;
-      padding: 0;
-      color: #fff;
-      padding:10px;
-
-      li {
-        color: white;
-        font-size: 1.1em;
-        font-weight: 700;
-        list-style: none;
-        margin-bottom: 15px;
-        padding-left: 0;
-        text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-
-        &:before {
-          display: inline-block;
-          font-family: FontAwesome;
-          font-style: normal;
-          font-weight: normal;
-          line-height: 1;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          content: "\f058";
-          font-size: 16px;
-          margin-left: -24px;
-          width: 24px;
-          color: #ffaa7b;
-        }
-      }
-    }
-  }
-
-  &:__quote {
-    font-style: italic;
-    font-size: 18px;
-    margin: 20px 0;
-    text-align: left;
-  }
-
-  .gray-header {
-    color: #8b8178;
-    text-align: left;
-    background-color: #F5F5F5;
-    padding: 30px;
-
-    .title {
-      font-weight: 700;
-      font-size: 32px;
-    }
-  }
-}
-
-//Form Fields
-.form-background{
-  color:white;
-  width:100%;
-  padding:40px 0;
-  background-size:cover;
-  background-image:url("../images/form-background.jpg");
-  .form-holder{
-    padding:30px;
-    background-color:rgba(0,52,120,0.5);
-    .nf-field-label label{
-      color:white;
-      font-weight:700;
-      font-weight:1.3em;
-    }
-    .submit-wrap input{
-      background-color: $primary-color;
-      padding: 10px 50px;
-      border: none;
-      color: white;
-      &:hover{
-        background-color:white;
-        color:$primary-color;
-      }
-    }
-  }
-}
-
-
-//Page full width
 
 .gray-header {
   color: #8b8178;
@@ -277,7 +81,7 @@ body {overflow-x: hidden;}
   background-color: $light-gray;
 
   h2 {
-    padding: 30px 0;
+    padding:30px 20px; 
     font-weight: 700;
     font-size: 36px;
   }
@@ -347,12 +151,8 @@ body {overflow-x: hidden;}
   padding: 40px;
   font-size: 1.1em;
 
-  .gray-title{
-      font-size:32px;
-  }
-
   h2 {
-    font-size: 22px;
+    font-size: 32px;
     margin: 0;
     font-weight: 700;
     margin: 10px 0;
@@ -371,61 +171,4 @@ body {overflow-x: hidden;}
 
 .italic, em {
   font-style: italic;
-}
-
-//sidebar-right
-
-.side-quote {
-  &__callout {
-    background-color: $light-gray;
-    color: $dark-gray;
-    padding: 30px 30px 15px;
-    background-clip: padding-box;
-    position: relative;
-    margin-bottom: 30px;
-
-    &:after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 20px solid #f5f5f5;
-      position: absolute;
-      bottom: -20px;
-      margin-left: -20px;
-      left: 50%;
-    }
-  }
-
-  &__quote {
-    border: 0;
-    padding: 0;
-    font-size: 16px;
-    color: #666;
-  }
-
-  &__author {
-    color: $medium-gray;
-    font-size: 13px;
-    padding: 20px 0 10px;
-
-    .bracket {
-      color: $primary-color;
-      font-size: 20px;
-      float: right;
-      margin-top: -10px;
-    }
-  }
-
-  &__photo {
-    border-radius: 50%;
-    border: solid 5px $light-gray;
-    height: auto;
-    width: 50%;
-    overflow: hidden;
-    text-align: center;
-    margin-left: 25%;
-  }
 }

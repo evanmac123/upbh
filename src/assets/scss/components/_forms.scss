@@ -1,0 +1,28 @@
+
+//Form Fields
+.form-background{
+  color:white;
+  width:100%;
+  padding:40px 0;
+  background-size:cover;
+  background-image:url("../images/form-background.jpg");
+  .form-holder{
+    padding:30px;
+    background-color:rgba(0,52,120,0.5);
+    .nf-field-label label{
+      color:white;
+      font-weight:700;
+      font-weight:1.3em;
+    }
+    .submit-wrap input{
+      background-color: $primary-color;
+      padding: 10px 50px;
+      border: none;
+      color: white;
+      &:hover{
+        background-color:white;
+        color:$primary-color;
+      }
+    }
+  }
+}

@@ -16,6 +16,14 @@ body{
     }
 }
 
+.main-wrap.sidebar-right{
+  max-width:1080px;
+  .main-content{
+    width:auto;
+
+  }
+}
+
 .main-wrap {
   @include xy-grid-container;
   @include xy-grid();
@@ -25,6 +33,7 @@ body{
   @include breakpoint(medium) {
     margin-top: 3rem;
   }
+
 
   &.sidebar-left {
 

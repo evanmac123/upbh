@@ -1,193 +1,150 @@
-// Page header
-.front-hero {
-  .marketing {
-    @include xy-grid-container(55rem);
-    @include xy-grid;
+
+.front {
+  .front-header {
+    .front-hero {
+      background-image: url("../images/Slider/UPBH.jpg");
+      background-size: cover;
+      min-height: 526px;
+      height: 100%;
+      padding:0;
+      margin-bottom:30px;
+    }
+
+    .marketing-right{
+      position:relative;
+      display:none;
+      @include breakpoint(medium){
+        display:block;
+      }
+      img{
+      width: auto;
+      position: relative;
+      border: 4px solid rgba(255,255,255,0.4);
+      @include vertical-align();
+      }
+    }
+    .marketing-left {
+      @include breakpoint(medium) {
+        height: 100%;
+        min-height: 526px;
+        padding: 60px 0;
+      }
+      background-color: rgba(0,52,120,.5);
+      text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+
+
+      h2{
+        color: #fff;
+        font-size: 22px;
+        max-width: 500px;
+        margin-bottom: 15px;
+        padding: 5px 25px 5px 25px;
+        text-align: left;
+        font-weight: bold;
+        font-family: 'Lato',arial,sans-serif;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+      }
+      h3{
+      color: #fff;
+      font-size: 68px;
+      max-width: 540px;
+      margin-bottom: 0;
+      text-align: center;
+      font-family: 'Lato',arial,sans-serif;
+      font-weight: 800;
+      text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+      padding: 5px 25px 5px 25px;
+      }
+      .italic-title{
+        color: #fff;
+        font-size: 40px;
+        max-width: 540px;
+        margin-bottom: 0;
+        padding: 25px 30px 25px 30px;
+        text-align: center;
+        font-weight: 500;
+        font-style: italic;
+        font-family: 'Lato',arial,sans-serif;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+      }
+
+      .title {
+        color: $white;
+        @include breakpoint(medium) {
+          font-size: 48px;
+        }
+        font-size: 28px;
+        max-width: 540px;
+        margin-bottom: 0;
+        padding: 5px 25px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .subtitle {
+        color: $white;
+        @include breakpoint(medium) {
+          font-size: 68px;
+        }
+        font-size: 38px;
+        max-width: 540px;
+        margin-bottom: 0;
+        text-align: center;
+        font-family: 'Lato',arial,sans-serif;
+        font-weight: 700;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+      }
+    }
+
+    .tagline {
+      width: 100%;
+      padding: 0;
+      color: #fff;
+      padding:10px;
+
+      li {
+        color: white;
+        font-size: 1.1em;
+        font-weight: 700;
+        list-style: none;
+        margin-bottom: 15px;
+        padding-left: 0;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+
+        &:before {
+          display: inline-block;
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\f058";
+          font-size: 16px;
+          margin-left: -24px;
+          width: 24px;
+          color: #ffaa7b;
+        }
+      }
+    }
   }
 
-  @include breakpoint(small) {
-    background: url('../images/demo/hero-bg-foundation-6-small.svg') bottom center;
-    background-size: cover;
-    background-position: bottom;
-    padding: rem-calc(65%) 0;
-    margin: 0 0 rem-calc(32);
-    height: auto;
-    position: relative;
+  .home__quote {
+    font-style: italic;
+    font-size: 18px;
+    margin: 20px 0;
     text-align: left;
   }
 
-  @include breakpoint(medium) {
-    background: url('../images/demo/hero-bg-foundation-6-large.svg') bottom center;
-    background-size: cover;
-    background-position: center;
-    height: rem-calc(685);
-    margin: 0 0 rem-calc(72);
-  }
+  .gray-header {
+    color: #8b8178;
+    text-align: left;
+    background-color: #F5F5F5;
+    padding: 30px;
 
-  .watch {
-    @include breakpoint(small) {
-      @include xy-cell(7);
+    .title {
+      font-weight: 700;
+      font-size: 32px;
     }
-
-    @include breakpoint(medium) {
-      @include xy-cell(12);
-    }
-
-    a {
-      color: #B4C9D1;
-      cursor: pointer;
-      font-weight: 400;
-      margin-right: rem-calc(20);
-    }
-
-    a:hover {
-      color: #fff;
-    }
-
-    #stargazers {
-      :before {
-        content: "\f09b";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
-      }
-    }
-
-    #twitter {
-      :before {
-        content: "\f099";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
-      }
-    }
-
-  }
-
-  .tagline {
-  }
-
-  h1 {
-    color: #fff;
-    font-weight: 500;
-
-    @include breakpoint(small) {
-      font-size: 2.2rem;
-    }
-
-    @include breakpoint(medium) {
-      font-size: 2.875rem;
-    }
-  }
-
-  h4 {
-    color: #fefefe;
-    font-weight: 300;
-    font-size: 1.3125rem;
-  }
-
-  .download {
-    margin-top: rem-calc(20);
-  }
-}
-
-// Intro
-.intro {
-  @include xy-grid-container;
-  @include xy-grid;
-
-  .fp-intro {
-    @include breakpoint(small) {
-      @include xy-cell(12);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(10);
-      @include xy-cell-offset(1);
-
-      h2 {
-        font-weight: 300;
-        margin-bottom: 1.5rem;
-      }
-
-      h4 {
-        font-size: 1.125rem;
-        line-height: 1.6;
-        color: #777;
-        margin-bottom: 2rem;
-      }
-    }
-  }
-}
-
-// Section divider
-.section-divider {
-  @include xy-grid-container;
-  @include xy-grid;
-
-  hr {
-    @include xy-cell(12);
-    @extend .dotted;
-    box-sizing: border-box;
-  }
-}
-
-// Benefits
-.benefits {
-  @include xy-grid-container;
-  @include xy-grid;
-  text-align: center;
-
-  header {
-    @include xy-cell(12);
-
-    h2 {
-      font-weight: 300;
-    }
-
-    h4 {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      color: #777;
-    }
-  }
-
-  .semantic,
-  .responsive,
-  .customizable,
-  .professional {
-    @include breakpoint(small) {
-      @include xy-cell(12);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(3);
-    }
-
-    img {
-      padding: 1.25rem;
-      margin: 1rem auto 0 auto;
-    }
-
-    h3 {
-      color: #0a0a0a;
-      font-weight: 300;
-      font-size: 1.75rem;
-    }
-
-    p {
-      font-size: 0.9375rem;
-    }
-  }
-
-  .why-foundation {
-    @include xy-cell(12);
-    margin-top: 4rem;
   }
 }

@@ -30,7 +30,6 @@
 			</div>
 		</div>
 		</div>
-	<div class="footer-container">
 		<footer class="footer">
 			<div class="top-footer grid-x grid-container">
 				<div class="top-footer-left large-8 cell">
@@ -44,7 +43,6 @@
 			<?php dynamic_sidebar( 'footer-widgets' ); ?>
 			</div>
 		</footer>
-	</div>
 
 <?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
 	</div><!-- Close off-canvas content -->

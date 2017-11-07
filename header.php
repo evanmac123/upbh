@@ -89,7 +89,7 @@
 					<?php endif; ?>
 				</div>
 			</nav>
-			<div class="desktop-men top-bar-right-menu">
+			<div class="top-bar-right-menu">
 			<?php foundationpress_top_bar_r(); ?>
 			</div>
 		</div>
