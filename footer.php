@@ -12,7 +12,7 @@
 </div><!-- Close container -->
 	<div class="footer-container" data-sticky-footer>
 		<div class="footer-phone-bar">
-			<div class="grid-x footer">
+			<div class="grid-x footer grid-container">
 			<h3 class="large-6 cell">
 				<div class="phone-bar-text">
 				Get Set UP For Life.
@@ -31,7 +31,7 @@
 		</div>
 		</div>
 		<footer class="footer">
-			<div class="top-footer grid-x">
+			<div class="top-footer grid-x grid-container">
 				<div class="top-footer-left large-8 cell">
 					<?php dynamic_sidebar( 'footer-widgets-top-left' ); ?>
 				</div>
@@ -39,7 +39,7 @@
 						<?php dynamic_sidebar( 'footer-widgets-top-right' ); ?>
 			</div>
 			</div>
-			<div class="lower-footer grid-x">
+			<div class="lower-footer grid-x grid-container">
 			<?php dynamic_sidebar( 'footer-widgets' ); ?>
 			</div>
 		</footer>

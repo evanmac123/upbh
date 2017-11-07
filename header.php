@@ -45,30 +45,34 @@
 		<?php endif; ?>
 
 
-		<header class="site-header" role="banner">
+		<header class="site-header " role="banner">
+			<div class="grid-container">
 			<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?>>
 				<div class="title-bar-left">
-					<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
-					<span class="site-mobile-title title-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</span>
+					<!-- mobile only -->
+					<?php
+					// Display the Custom Logo, default logo, or the site's name
+					if ( has_custom_logo() ) {
+								the_custom_logo();
+							} else { ?>
+							<img width="130" height="130" src="www.google.com" />
+					<?php } ?>
+				</div>
+				<div class="title-bar-right">
+					<button class="mobile-menu-button border-button" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>">Menu</button>
 				</div>
 			</div>
 
 			<nav class="site-navigation top-bar" role="navigation">
-				<div class="top-bar">
-					<div class="site-desktop-title top-bar-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<div class="site-desktop-title top-bar-title ">
 						<?php
 						// Display the Custom Logo, default logo, or the site's name
 						if ( has_custom_logo() ) {
-                            the_custom_logo();
-                        } else { ?>
-                            <img width="130" height="130" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
-                        <?php } ?>
-                    </a>
+                  the_custom_logo();
+              	} else { ?>
+                <img width="130" height="130" src="www.google.com" />
+            <?php } ?>
 					</div>
-				</div>
 				<div class="top-bar-right">
 					<div class="call-button">
 							<div class="call-title">
@@ -78,13 +82,17 @@
 								Get Set UP For Life! Give us a call!
 						</div>
 					</div>
-					<?php foundationpress_top_bar_r(); ?>
+
 
 					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
 					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
 					<?php endif; ?>
 				</div>
 			</nav>
+			<div class="desktop-men top-bar-right-menu">
+			<?php foundationpress_top_bar_r(); ?>
+			</div>
+		</div>
 
 		</header>
 

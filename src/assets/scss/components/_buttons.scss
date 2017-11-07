@@ -6,3 +6,34 @@
   border-radius: 3px;
   border: none;
 }
+
+button, .button{
+    color: #ffffff;
+  font-size: 20px;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  background: $primary-color;
+  color: $white;
+  font-weight:700;
+  border-radius: 5px;
+  padding: 6px 18px;
+  &:hover{
+
+  }
+}
+
+button.border-button{
+  border:$primary-color solid 2px;
+  color:$primary-color;
+  background-color:transparent;
+  border-radius: 5px;
+  padding: 6px 18px;
+  font-weight:300;
+  text-transform:uppercase;
+  &:hover{
+  font-family: sans-serif;
+  background: $primary-color;
+  color: $white;
+
+  }
+}

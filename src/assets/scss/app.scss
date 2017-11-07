@@ -71,7 +71,7 @@ body {overflow-x: hidden;}
 
 .call-button {
   color: #fefefe;
-  padding: 11px;
+  padding: 6px;
   background-color: #ffaa7b;
   border-radius: 5px;
   width: 308px;
@@ -103,6 +103,10 @@ body {overflow-x: hidden;}
 
     .marketing-right{
       position:relative;
+      display:none;
+      @include breakpoint(medium){
+        display:block;
+      }
       img{
       width: auto;
       position: relative;
@@ -111,11 +115,14 @@ body {overflow-x: hidden;}
       }
     }
     .marketing-left {
+      @include breakpoint(medium) {
+        height: 100%;
+        min-height: 526px;
+        padding: 60px 0;
+      }
       background-color: rgba(0,52,120,.5);
-      height: 100%;
-      min-height: 526px;
-      padding: 60px 0;
       text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+
 
       h2{
         color: #fff;
@@ -153,8 +160,11 @@ body {overflow-x: hidden;}
       }
 
       .title {
-        color: #fff;
-        font-size: 48px;
+        color: $white;
+        @include breakpoint(medium) {
+          font-size: 48px;
+        }
+        font-size: 28px;
         max-width: 540px;
         margin-bottom: 0;
         padding: 5px 25px;
@@ -163,8 +173,11 @@ body {overflow-x: hidden;}
       }
 
       .subtitle {
-        color: #fff;
-        font-size: 68px;
+        color: $white;
+        @include breakpoint(medium) {
+          font-size: 68px;
+        }
+        font-size: 38px;
         max-width: 540px;
         margin-bottom: 0;
         text-align: center;
@@ -178,6 +191,7 @@ body {overflow-x: hidden;}
       width: 100%;
       padding: 0;
       color: #fff;
+      padding:10px;
 
       li {
         color: white;
@@ -281,9 +295,11 @@ body {overflow-x: hidden;}
 .check {
   color: white;
   width: 100%;
+  margin:0;
 }
 
 .container   {
+  margin-top: 160px;
   font-size: 1em;
   font-weight: 400;
   margin-bottom: 5px;

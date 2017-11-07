@@ -3,16 +3,3 @@ body#tinymce{
   max-width: $grid-row-width; // Give the editor a max-width
   padding: rem-calc(20) !important;
 }
-
-button{
-    color: #ffffff;
-  font-size: 20px;
-  font-family: sans-serif;
-  line-height: 1.5em;
-  background: $primary-color;
-  color: $white;
-  font-weight:700;
-  border-radius: 5px !important;
-  border-width: 0px !important;
-  padding: 6px 18px !important;
-}

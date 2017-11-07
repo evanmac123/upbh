@@ -1,3 +1,21 @@
+body{
+  @include breakpoint(medium) {
+    position:absolute;
+    left:0;
+    top:0;
+  }
+  @include breakpoint(large) {
+    position:relative;
+  }
+}
+
+.grid-container{
+    padding: 0 10px;
+    @include breakpoint(large) {
+    padding:0;
+    }
+}
+
 .main-wrap {
   @include xy-grid-container;
   @include xy-grid();
@@ -26,19 +44,21 @@
   // Full width template
   &.full-width {
     .main-content {
-      @include xy-cell(12);
+      //@include xy-cell(12);
     }
   }
 
   .main-content {
+    width:100%;
+    margin:0;
 
     // Default template
     @include breakpoint(small) {
-      @include xy-cell(12);
+      //@include xy-cell(12);
     }
 
     @include breakpoint(medium) {
-      @include xy-cell(8);
+      //@include xy-cell(8);
     }
 
   }
