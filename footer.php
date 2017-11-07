@@ -30,6 +30,7 @@
 			</div>
 		</div>
 		</div>
+	<div class="footer-container">
 		<footer class="footer">
 			<div class="top-footer grid-x grid-container">
 				<div class="top-footer-left large-8 cell">
